@@ -16,7 +16,6 @@ class AppsController < ApplicationController
     @comment = Comment.new
     @app = App.find(params[:id])
     app_id = params[:id]
-        binding.pry
     @comments = Comment.where(:app_id => app_id)
     respond_to do |format|
       format.html # show.html.erb
