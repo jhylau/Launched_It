@@ -1,31 +1,31 @@
-<h1>Listing comments</h1>
+    <h4 class="pull-left">Comments</h4>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Comment</th>
-    <th>App</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <table class="table">
+      <tr>
+        <th>Email</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Comment</th>
+        <th>App</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<% @comments.each do |comment| %>
-  <tr>
-    <td><%= comment.email %></td>
-    <td><%= comment.first_name %></td>
-    <td><%= comment.last_name %></td>
-    <td><%= comment.comment %></td>
-    <td><%= comment.app_id %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.email %></td>
+        <td><%= comment.first_name %></td>
+        <td><%= comment.last_name %></td>
+        <td><%= comment.comment %></td>
+        <td><%= comment.app_id %></td>
+        <td><%= link_to 'Show', comment %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<br />
+    <br />
 
-<%= link_to 'New Comment', new_comment_path %>
+    <%= link_to 'New Comment', new_comment_path %>

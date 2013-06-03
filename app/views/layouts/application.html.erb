@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LaunchIt</title>
+  <title>Launched It</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet"          href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,200italic,400italic,600italic">
 </head>
-<body>
-
-<%= yield %>
-
+<body class="body-background">
+  <header class="navbar">
+    <div class="navbar-inner">
+      <div class="container">     
+        <a class="brand" href="/"><strong>Launched It!</strong></a>
+        <ul class="nav nav2 pull-right">
+          <!-- <li><a href="#">Browse</a></li> -->
+          <li><%= link_to 'Submit App', new_app_path %></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+<div class="container">
+  <div class="text-center">
+    <%= yield %>
+  </div>
+</div>
+<div class="final-footer"> 
+  <div class="container">    
+    <div class="row footer">
+            <ul class ="footer-ul span4">
+              <li><a href="#"><small>Terms of Service</small></a></li>
+              <li><a href="#"><small>Privacy</small></a></li>
+              <li><a href="#"><small>Contact</small></a></li>
+            </ul>
+          <div class="span3 footer-image"></div>
+          <div class="span4">
+            <h5 class="copyright">&copy; 2013 Launched It, Inc. All Rights Reserved.</h5>
+          </div>          
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
 </html>

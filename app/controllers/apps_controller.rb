@@ -3,7 +3,6 @@ class AppsController < ApplicationController
   # GET /apps.json
   def index
     @apps = App.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @apps }
@@ -13,8 +12,12 @@ class AppsController < ApplicationController
   # GET /apps/1
   # GET /apps/1.json
   def show
+    # @comments = Comment.where(:integer => 1)
+    @comment = Comment.new
     @app = App.find(params[:id])
-
+    app_id = params[:id]
+        binding.pry
+    @comments = Comment.where(:app_id => app_id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @app }

@@ -1,6 +1,10 @@
+require 'pry'
 class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
+  def default_url_options
+    {:app_id=> 1}
+  end
   def index
     @comments = Comment.all
 
@@ -25,7 +29,8 @@ class CommentsController < ApplicationController
   # GET /comments/new.json
   def new
     @comment = Comment.new
-
+    @apps = App.all
+    binding.pry
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @comment }

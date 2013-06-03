@@ -27,10 +27,7 @@
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </div>
-  <div class="field">
-    <%= f.label :app_id %><br />
-    <%= f.number_field :app_id %>
-  </div>
+  <%= f.hidden_field :app_id, :value => params[:id] %>
   <div class="actions">
     <%= f.submit %>
   </div>
