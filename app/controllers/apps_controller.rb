@@ -14,9 +14,12 @@ class AppsController < ApplicationController
   def show
     # @comments = Comment.where(:integer => 1)
     @comment = Comment.new
+    @prop = Prop.new
+    @props = Prop.all
+    @prop_count = Prop.where(:app_id => params[:id]).all.count
     @app = App.find(params[:id])
-    app_id = params[:id]
-    @comments = Comment.where(:app_id => app_id)
+    @app_id = params[:id]
+    @comments = Comment.where(:app_id => @app_id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @app }

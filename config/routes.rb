@@ -1,6 +1,7 @@
 LaunchIt::Application.routes.draw do
   resources :comments
   resources :apps
+  resources :props
   match "/" => "apps#index"
 
   # The priority is based upon order of creation:
