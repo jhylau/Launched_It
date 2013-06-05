@@ -10,6 +10,8 @@ class Comment < ActiveRecord::Base
   validates :first_name, length:{ minimum: 2, too_short: "Name must be atleast 2 characters"}
   validates :last_name, length:{minimum: 2, too_short: "Name must be atleast 2 characters"}
 
+  #Not sure how else to validate for email, other than checking for an @
+  validates_format_of :email, with: /@/   
 
   belongs_to :app
 end
