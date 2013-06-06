@@ -1,36 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
 
-<%= render :template => "props/index" %>
-<%= render :template => "props/new" %>
-<p>
-  <b>Title:</b>
-  <%= @app.title %>
-</p>
+  <%= render :template => "props/index" %>
+  <%= render :template => "props/new" %>
+  <p>
+    <b>Title:</b>
+    <%= @app.title %>
+  </p>
 
-<p>
-  <b>Url:</b>
-  <%= @app.url %>
-</p>
+  <p>
+    <b>Url:</b>
+    <%= @app.url %>
+  </p>
 
-<p>
-  <b>Codebase url:</b>
-  <%= @app.codebase_url %>
-</p>
+  <p>
+    <b>Codebase url:</b>
+    <%= @app.codebase_url %>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= @app.description %>
-</p>
+  <p>
+    <b>Description:</b>
+    <%= @app.description %>
+  </p>
 
-<p>
-  <b>Email:</b>
-  <%= @app.email %>
-</p>
+  <p>
+    <b>Email:</b>
+    <%= @app.email %>
+  </p>
 
 
-<%= link_to 'Edit', edit_app_path(@app) %> |
-<%= link_to 'Back', apps_path %>
-<br><br>
-<%= render :template => "comments/index" %>
-<%= render :template => "comments/new" %>
+  <%= link_to 'Edit', edit_app_path(@app) %> |
+  <%= link_to 'Back', apps_path %>
+  <br><br>
+  <%= render :template => "comments/index" %>
+  <%= render :template => "comments/new" %>
+</div>
