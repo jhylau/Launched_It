@@ -46,6 +46,89 @@ ul.nav2 li a{font-weight:bold; color:white;}
 .table-rankings {
   border:none;
 }
+//forms
+
+.new_app{
+  //display:inline-block;
+
+  .field{
+
+    display:inline-block;
+    margin:15px 30px;
+    margin-left:0px;
+    color:#52595D;
+    font-weight:bold;
+    input{
+      width:180px;
+    }
+    label{
+      font-weight:bold;
+    }
+  }
+
+  #app_description{
+    width:870px;
+    height:200px;
+    margin-bottom:15px;
+    margin-top:0px;
+  }
+
+  .actions{
+    margin-top:35px;
+
+
+    .submit_it{
+      float:right;
+      padding-right:50px;
+    }
+  }
+
+}
+
+.new_comment{
+
+  form > div:first-child {
+  display: none !important;
+  }
+
+
+  .field{
+    display:inline-block;
+    margin:15px 30px;
+    margin-left:0px;
+    color:#52595D;
+    font-weight:bold;
+    input{
+      width:180px;
+    }
+    label{
+      font-weight:bold;
+    }
+
+  }
+
+  .short_form_items{
+    display:inline-block;
+    width:300px;
+
+
+    .field{
+    display:block;
+    }
+  }
+
+  #comment_description{
+    height:300px;
+    float:right;
+    textarea{
+      height:250px !important;
+      width:575px;
+    }
+    margin-top:0px;
+  }
+}
+
+
 
 //Hero-Unit
 .hero-unit {
