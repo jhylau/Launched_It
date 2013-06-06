@@ -50,6 +50,19 @@ describe Comment do
     FactoryGirl.build(:comment, email: 'oiwfioj#gmail.com')
     expect(Comment.count).to eql(previous_count)
   end
+
+  describe Prop do
+    it 'will not create a new instance of Prop without an app id' do
+      previous_count = Prop.count
+      FactoryGirl.build(:prop, app_id: '')
+      expect(Prop.count).to eql(previous_count)
+    end
+    it 'will create a new instance of Prop if app id is provided' do
+      previous_count = Prop.count
+      FactoryGirl.create(:prop)
+      expect(Prop.count).to eql(previous_count + 1)
+    end
+  end
 end
 
 
