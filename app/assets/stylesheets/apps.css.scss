@@ -209,8 +209,12 @@ span{
     text-decoration: none;
     transition: none;
     }
+    input[type="text"] {
+      width:98%;
+      padding:12px 3px;
+    }
 
-    .home_button{
+    .home_button input{
        -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
       -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
       box-shadow:inset 0px 1px 0px 0px #fce2c1;
@@ -231,6 +235,7 @@ span{
       text-decoration:none;
       text-shadow:1px 1px 0px #cc9f52;
       text-align:center;
+      width:100%;
    
     }
 
