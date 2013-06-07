@@ -1,8 +1,10 @@
 LaunchIt::Application.routes.draw do
+  get "pages/index"
+
   resources :comments
   resources :apps
   resources :props
-  match "/" => "apps#index"
+  #match "/" => "apps#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -53,7 +55,7 @@ LaunchIt::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'pages#index'
 
   # See how all your routes lay out with "rake routes"
 

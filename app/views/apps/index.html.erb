@@ -1,4 +1,4 @@
-<div id="main_wrap">
+<!-- <div id="main_wrap">
 
     <div class="main_grab">
         <h1>Launch Your APP</h1>
@@ -8,7 +8,7 @@
     </div>
 
 
-</div>
+</div> -->
 <!-- <div class="container main-page">
 
 
@@ -24,22 +24,23 @@
 
 <!-- <h1>Our wonderful apps!</h1>
  -->
-<!-- <table class="table success">
-  <tr>
-    <th>Title</th>
-    <th>Url</th>
-    <th>Codebase url</th>
-    <th>Description</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container">
+    <table class="table success">
+      <tr>
+        <th>Title</th>
+        <th>Url</th>
+        <th>Codebase url</th>
+        <th>Description</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
+    <%= render partial:'app', collection:@apps %>
+    </table>
 
-</table>
+    <br />
+    <%= link_to 'Enter a new app here!', new_app_path %>
+</div>
 
-<br />
-
-<%= link_to 'Enter a new app here!', new_app_path %>
- -->
