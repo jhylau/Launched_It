@@ -21,7 +21,7 @@ class AppsController < ApplicationController
   # GET /apps/new
   # GET /apps/new.json
   def new
-    binding.pry
+    #binding.pry
     
 
     if params[:part_app].present?
