@@ -4,7 +4,7 @@ describe Comment do
     create_app
     click_button 'Create App'
   end
-  it 'it creates an app if all the proper information is entered' do 
+  it 'it creates an comment if all the proper information is entered' do 
     previous_count = Comment.count
     visit '/apps'
     click_link 'Show'

@@ -2,6 +2,7 @@ class App < ActiveRecord::Base
   attr_accessible :codebase_url, :description, :email, :title, :url
 
   has_many :comments
+  has_many :props
 
   validates_presence_of :codebase_url
   validates_presence_of :description

@@ -1,0 +1,10 @@
+<tr>
+   <td><%= app.title %></td>
+   <td><%= app.url %></td>
+   <td><%= app.codebase_url %></td>
+   <td><%= app.description %></td>
+   <td><%= app.email %></td>
+   <td><%= link_to 'Show', app %></td>
+   <td><%= link_to 'Edit', edit_app_path(app) %></td>
+   <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ </tr>

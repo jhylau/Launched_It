@@ -6,24 +6,14 @@
         <th>First name</th>
         <th>Last name</th>
         <th>Comment</th>
-        <th>App</th>
+        
         <th></th>
         <th></th>
         <th></th>
       </tr>
 
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.email %></td>
-        <td><%= comment.first_name %></td>
-        <td><%= comment.last_name %></td>
-        <td><%= comment.comment %></td>
-        <td><%= comment.app_id %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+   <%= render partial:'comment', collection:@comments %>
+   
     </table>
 
     <br />

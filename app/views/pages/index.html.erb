@@ -1,0 +1,38 @@
+<div id="main_wrap">
+
+    <div class="main_grab">
+        <h1>Launch Your APP</h1>
+
+
+        <%= form_for "part_app", method:"get", url: new_app_path do |f| %>
+       
+        
+          <%= f.text_field :email, :placeholder =>"  Enter Your Email"%><br/>
+          
+          <%= f.text_field :url , :placeholder => "  App URL" %><br />
+          <span class="home_button"><%= f.submit :value =>"Register" %></span>
+
+
+
+
+        <% end %>
+        
+       <!--  <a class="home_button" style="width:330px;height:50px;line-height:50px;background-color:#36454F;" href="/apps/new">Register</a> -->
+
+    </div>
+
+
+
+</div>
+
+<div class="bottom_home">
+
+  <div class="container" style="height:100%;">
+
+    <% @apps.each do |app| %>
+      <%= render 'homeapp', app: app %>
+
+    <% end %>
+  </div>
+
+</div>

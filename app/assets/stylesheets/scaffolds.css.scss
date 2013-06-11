@@ -25,7 +25,7 @@ a {
   }
   &:hover {
     color: #fff;
-    background-color: #000;
+    //background-color: #000;
   }
 }
 
@@ -67,3 +67,25 @@ div {
     list-style: square;
   }
 }
+
+//overwrite BOOTSTRAP
+.navbar-inner {border:none; border-radius:none;
+  background-color:#36454F !important;
+  background-repeat: repeat-x;
+  background-image:none;
+  }  
+
+
+.main-page{
+  height:auto;
+
+  background-color:#36454F;
+ 
+ }   
+
+
+
+
+
+
+

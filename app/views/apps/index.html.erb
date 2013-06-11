@@ -1,31 +1,46 @@
-<h1>Our wonderful apps!</h1>
+<!-- <div id="main_wrap">
 
-<table class="table success">
-  <tr>
-    <th>Title</th>
-    <th>Url</th>
-    <th>Codebase url</th>
-    <th>Description</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="main_grab">
+        <h1>Launch Your APP</h1>
+        
+        <a class="btn" style="width:330px;height:50px;line-height:50px;background-color:#36454F;" href="/apps/new">Register</a>
 
-<% @apps.each do |app| %>
-  <tr>
-    <td><%= app.title %></td>
-    <td><%= app.url %></td>
-    <td><%= app.codebase_url %></td>
-    <td><%= app.description %></td>
-    <td><%= app.email %></td>
-    <td><%= link_to 'Show', app %></td>
-    <td><%= link_to 'Edit', edit_app_path(app) %></td>
-    <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    </div>
 
-<br />
 
-<%= link_to 'Enter a new app here!', new_app_path %>
+</div> -->
+<!-- <div class="container main-page">
+
+
+
+
+</div> -->
+
+
+
+
+
+
+
+<!-- <h1>Our wonderful apps!</h1>
+ -->
+<div class="container">
+    <table class="table success">
+      <tr>
+        <th>Title</th>
+        <th>Url</th>
+        <th>Codebase url</th>
+        <th>Description</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <%= render partial:'app', collection:@apps %>
+    </table>
+
+    <br />
+    <%= link_to 'Enter a new app here!', new_app_path %>
+</div>
+

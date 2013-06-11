@@ -18,3 +18,9 @@ FactoryGirl.define do
     last_name 'Thomas'
   end
 end
+
+FactoryGirl.define do
+  factory :prop do
+    app_id 3
+  end
+end

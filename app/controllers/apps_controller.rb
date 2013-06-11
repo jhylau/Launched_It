@@ -3,10 +3,6 @@ class AppsController < ApplicationController
   # GET /apps.json
   def index
     @apps = App.all
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @apps }
-    end
   end
 
   # GET /apps/1
@@ -14,24 +10,26 @@ class AppsController < ApplicationController
   def show
     # @comments = Comment.where(:integer => 1)
     @comment = Comment.new
+    @prop = Prop.new
+    @props = Prop.all
+    @prop_count = Prop.where(:app_id => params[:id]).all.count
     @app = App.find(params[:id])
-    app_id = params[:id]
-    @comments = Comment.where(:app_id => app_id)
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @app }
-    end
+    @app_id = params[:id]
+    @comments = Comment.where(:app_id => @app_id)
   end
 
   # GET /apps/new
   # GET /apps/new.json
   def new
-    @app = App.new
+    #binding.pry
+    
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @app }
+    if params[:part_app].present?
+      @app = App.new(params[:part_app])
+    else
+      @app = App.new
     end
+
   end
 
   # GET /apps/1/edit
@@ -44,15 +42,11 @@ class AppsController < ApplicationController
   def create
     @app = App.new(params[:app])
 
-    respond_to do |format|
       if @app.save
-        format.html { redirect_to @app, notice: 'App was successfully created.' }
-        format.json { render json: @app, status: :created, location: @app }
+        redirect_to @app, notice: 'App was successfully created.'
       else
-        format.html { render action: "new" }
-        format.json { render json: @app.errors, status: :unprocessable_entity }
+        render action: "new"
       end
-    end
   end
 
   # PUT /apps/1

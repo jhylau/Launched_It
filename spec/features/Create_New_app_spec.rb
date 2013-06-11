@@ -2,7 +2,7 @@ require 'spec_helper'
 
 
 describe 'app' do 
-  describe 'create new app', :type => :feature do
+  describe 'create new app'  do
     it 'bring you to new app form' do 
       visit '/apps'
       click_link 'Enter a new app here!'
